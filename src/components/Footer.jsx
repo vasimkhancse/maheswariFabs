@@ -36,7 +36,7 @@ export const Footer = () => {
       
       {/* Main Footer Body */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-9 gap-10">
           
           {/* Col 1: Logo & Company Bio (4 cols) */}
           <div className="lg:col-span-4 space-y-4">
@@ -97,7 +97,7 @@ export const Footer = () => {
                   <span>Machinery Fleet</span>
                 </button>
               </li>
-              <li>
+              {/* <li>
                 <button 
                   onClick={() => scrollTo('why-us')}
                   className="hover:text-sky-400 transition-colors flex items-center gap-1.5"
@@ -114,7 +114,7 @@ export const Footer = () => {
                   <ChevronRight className="w-3 h-3 text-sky-500" />
                   <span>Workflow & QC</span>
                 </button>
-              </li>
+              </li> */}
               <li>
                 <button 
                   onClick={() => scrollTo('contact')}
@@ -127,28 +127,7 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* Col 3: Processes (3 cols) */}
-          <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-xs font-mono uppercase tracking-wider text-white font-bold border-b border-slate-800 pb-2">
-              Manufacturing Processes
-            </h4>
-            <ul className="space-y-2.5 text-xs">
-              {PROCESSES.map((p) => (
-                <li key={p.id}>
-                  <button
-                    onClick={() => scrollTo('processes')}
-                    className="text-left group flex items-start gap-2 hover:text-white transition-colors"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-sky-400 mt-1.5 group-hover:scale-125 transition-transform flex-shrink-0"></span>
-                    <div>
-                      <span className="font-bold text-slate-300 group-hover:text-sky-400">{p.title}</span>
-                      <span className="block text-[11px] text-slate-500 font-mono">{p.subtitle}</span>
-                    </div>
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </div>
+          
 
           {/* Col 4: Contact Information (3 cols) */}
           <div className="lg:col-span-3 space-y-3">

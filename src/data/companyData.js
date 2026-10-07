@@ -11,7 +11,7 @@ export const COMPANY_INFO = {
   phone: "+91 9994931372",
   phoneDisplay: "+91 9994931372",
   whatsapp: "+91 9994931372",
-  email: "contact@maheswarfabs.com",
+  email: "contact@maheswarifabs.com",
   mapsUrl: "https://maps.google.com/?q=81/2+Adhavan+Industrial+Estate+Chinnavedampatti+Coimbatore+641049",
   workingHours: "Monday – Saturday: 8:30 AM – 7:30 PM",
 };
