@@ -12,7 +12,7 @@ export const Navbar = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 40);
 
-      const sections = ['home', 'processes', 'about', 'machinery', 'why-us', 'workflow', 'contact'];
+      const sections = ['home', 'processes', 'about', 'machinery', 'gallery', 'why-us', 'workflow', 'contact'];
       const current = sections.find(section => {
         const el = document.getElementById(section);
         if (el) {
@@ -33,6 +33,7 @@ export const Navbar = () => {
     { name: 'About', href: '#about' },
     { name: 'Processes', href: '#processes' },
     { name: 'Machinery', href: '#machinery' },
+    { name: 'Gallery', href: '#gallery' },
     // { name: 'Why Us', href: '#why-us' },
     // { name: 'Workflow', href: '#workflow' },
     { name: 'Contact', href: '#contact' },

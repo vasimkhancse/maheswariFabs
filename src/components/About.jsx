@@ -1,8 +1,9 @@
 import React from 'react';
 import { ShieldCheck, MapPin, Users, Award, CheckCircle, Factory, ArrowRight, Compass } from 'lucide-react';
-import { COMPANY_INFO } from '../data/companyData';
 
 export const About = () => {
+  const [activePhoto, setActivePhoto] = React.useState('bay');
+
   const stats = [
     { value: "40+", label: "Years of Experience", sub: "Since 1983 in Coimbatore", icon: Award },
     { value: "4", label: "Core Processes", sub: "Laser, Bending, Press & Welding", icon: Factory },
@@ -42,7 +43,7 @@ export const About = () => {
             </h2>
 
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
-              Since 1983, <strong>Maheswari Fabs</strong> has been providing reliable metal fabrication solutions in Coimbatore. With a dedicated manufacturing facility and experienced team, we deliver quality components through precision laser cutting, bending, power pressing and welding.
+              Since 1983, <strong>Maheswari Fabs</strong> has been providing reliable metal fabrication solutions in Coimbatore. With our dedicated 3,000 sq. ft. manufacturing facility and experienced team, we deliver quality components through precision CNC laser cutting, press brake bending, power pressing, and welding.
             </p>
 
             <div className="p-4 rounded-xl bg-slate-50 border-l-4 border-sky-500 border border-slate-200/80 space-y-2">
@@ -89,24 +90,39 @@ export const About = () => {
           {/* Right Column: Visual Showcase + Stats Card */}
           <div className="lg:col-span-6 space-y-6">
             
-            {/* Visual Photo */}
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 group">
+            {/* Visual Photo Card with Real Facility Photos */}
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 group bg-slate-950">
               <img
-                src="/images/quality-parts.jpg"
-                alt="Maheswari Fabs Precision Engineering Quality Inspection"
+                src={activePhoto === 'bay' ? '/images/facility-exterior-gate.jpg' : '/images/plant-interior-shopfloor.jpg'}
+                alt={activePhoto === 'bay' ? 'Maheswari Fabs Plant Interior Shop Floor Chinnavedampatti' : 'Maheswari Fabs Facility Exterior Works Entrance'}
                 className="w-full h-80 sm:h-96 object-cover transform transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent" />
               
-              {/* Badge Overlay */}
-              <div className="absolute bottom-4 left-4 right-4 bg-slate-900/90 backdrop-blur-md border border-slate-700 p-4 rounded-xl flex items-center justify-between">
-                <div>
-                  <span className="text-[10px] font-mono text-sky-400 font-bold uppercase tracking-wider block">Coimbatore Plant</span>
-                  <span className="text-sm font-bold text-white">Precision Inspection & CNC Verification</span>
-                </div>
-                <div className="text-right">
-                  <span className="text-xs font-mono font-bold text-emerald-400">100% Inspected</span>
-                </div>
+              {/* Photo View Switcher Toggle */}
+              <div className="absolute top-4 right-4 z-10 flex bg-slate-900/80 backdrop-blur-md p-1 rounded-lg border border-slate-700/80 text-[11px] font-mono">
+                <button
+                  type="button"
+                  onClick={() => setActivePhoto('bay')}
+                  className={`px-3 py-1 rounded transition-colors ${
+                    activePhoto === 'bay' 
+                      ? 'bg-sky-500 text-slate-950 font-bold' 
+                      : 'text-slate-300 hover:text-white'
+                  }`}
+                >
+                  Works Entrance
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setActivePhoto('exterior')}
+                  className={`px-3 py-1 rounded transition-colors ${
+                    activePhoto === 'exterior' 
+                      ? 'bg-sky-500 text-slate-950 font-bold' 
+                      : 'text-slate-300 hover:text-white'
+                  }`}
+                >
+                  Shop Floor
+                </button>
               </div>
             </div>
 

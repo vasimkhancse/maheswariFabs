@@ -1,26 +1,26 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ChevronLeft, ChevronRight, ArrowRight, Pause, Play } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 
 const BANNER_SLIDES = [
   {
     id: 'laser-cutting',
     title: 'LASER CUTTING',
     targetId: 'processes',
-    image: '/images/laser-cutting.jpg',
+    image: '/images/mitsubishi-laser-cutting.jpg',
     tag: 'Process 01'
   },
   {
     id: 'bending',
     title: 'BENDING',
     targetId: 'processes',
-    image: '/images/bending.jpg',
+    image: '/images/hindustan-260t-bending.jpg',
     tag: 'Process 02'
   },
   {
     id: 'power-press',
     title: 'POWER PRESS',
     targetId: 'processes',
-    image: '/images/power-press.jpg',
+    image: '/images/mechanical-power-press.jpg',
     tag: 'Process 03'
   },
   {
@@ -76,8 +76,6 @@ export const Hero = ({ onSelectProcess }) => {
       }
     }
   };
-
-  const current = BANNER_SLIDES[currentSlide];
 
   return (
     <section 

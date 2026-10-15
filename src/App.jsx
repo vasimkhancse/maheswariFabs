@@ -4,11 +4,10 @@ import Hero from './components/Hero';
 import ProcessSection from './components/ProcessSection';
 import About from './components/About';
 import MachinerySection from './components/MachinerySection';
-import WhyChooseUs from './components/WhyChooseUs';
-import Workflow from './components/Workflow';
+import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import { MessageSquare, Phone } from 'lucide-react';
+import { Phone } from 'lucide-react';
 import { COMPANY_INFO } from './data/companyData';
 
 function App() {
@@ -52,6 +51,9 @@ function App() {
 
         {/* 3. Machinery Showcase Section (Filters & Welding) */}
         <MachinerySection />
+
+        {/* 4. Workshop & Plant Gallery Showcase */}
+        <Gallery />
 
         {/* 5. Why Choose Us (4 Feature Cards) */}
         {/* <WhyChooseUs /> */}
